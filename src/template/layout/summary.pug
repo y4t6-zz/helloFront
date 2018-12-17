@@ -9,13 +9,7 @@ html(lang= lang)
     link(rel='stylesheet', href= path + 'assets/styleguide.css')
 
   body(class= template)
-
-    header.hf-head(role="banner")
-      .hf-wrapper
-        h1.hf-summaryHeader-title Sommaire
-    main(role="main")
-      section
-        block content
+    block content
 
     script(src= path + "assets/app.js", async)
 
