@@ -13,6 +13,10 @@ const getMods = (className, props) => {
     mods.push(className + '--position--' + props.position);
   }
 
+  if (props['offset-horizontal']) {
+    mods.push(className + '--offset-horizontal--' + props['offset-horizontal']);
+  }
+
   if (props.weight) {
     mods.push(className + '--weight--' + props.weight);
   }

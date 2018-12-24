@@ -8,6 +8,7 @@ const htmlmin = require("gulp-htmlmin");
 const size = require("gulp-size");
 const cache = require("gulp-cache");
 const options = require("minimist")(process.argv.slice(2));
+const rename = require("gulp-rename");
 
 const filters = {
   code(html, options) {
@@ -30,10 +31,17 @@ gulp.task("templates", () => {
         errorHandler: notify.onError("PUG Error: <%= error.message %>"),
       })
     )
-    .pipe(cache(pug({ pretty: true, filters })))
+    //.pipe(cache(pug({ pretty: true, filters })))
+    .pipe(pug({ pretty: true, filters }))
     .pipe(
       options.production ? htmlmin({ collapseWhitespace: true }) : gutil.noop()
     )
     .pipe(size({ title: "template" }))
+    .pipe(rename(function (path) {
+      path.dirname += "/ciao";
+      path.basename += "-goodbye";
+      path.extname = ".md";
+    }))
     .pipe(gulp.dest(config.dist));
+    //.pipe(gulp.dest('./tmp/'));
 });

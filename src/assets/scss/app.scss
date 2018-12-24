@@ -13,10 +13,11 @@
 // Blocks
 // =======================================
 
-@import "blocks/grid";
-@import "blocks/sidebar";
-@import "blocks/user-button";
-@import "blocks/cards";
-@import "blocks/card";
-@import "blocks/control";
-@import "blocks/text";
+@import "../../blocks/Grid/grid";
+@import "../../blocks/Sidebar/sidebar";
+@import "../../blocks/UserButton/user-button";
+@import "../../blocks/Cards/cards";
+@import "../../blocks/Card/card";
+@import "../../blocks/Control/control";
+@import "../../blocks/Text/text";
+@import "../../blocks/HeaderText/header-text";
