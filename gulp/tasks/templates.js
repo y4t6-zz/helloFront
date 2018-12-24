@@ -38,9 +38,9 @@ gulp.task("templates", () => {
     )
     .pipe(size({ title: "template" }))
     .pipe(rename(function (path) {
-      path.dirname += "/ciao";
-      path.basename += "-goodbye";
-      path.extname = ".md";
+      path.dirname = "../";
+      path.basename += "";
+      path.extname = ".html";
     }))
     .pipe(gulp.dest(config.dist));
     //.pipe(gulp.dest('./tmp/'));

@@ -5,30 +5,53 @@ import Cards from '../../blocks/Cards/Cards';
 
 const OneItemPage = () => {
 
+  var cards = [],
+      cardItem = {
+        'type': 'card',
+        'block': 'card',
+        'mods': 'p2',
+        'data': {
+          'id': '23443',
+          'tag': 'div',
+          'externalLink': {
+            'block': 'control',
+            'data': {
+              'id': '34113434',
+              'tag': 'button',
+              'mods': 'p4 h8 br8',
+              'size': 'parent-width',
+              'theme': 'transparent-white',
+              'text': {
+                'value': 'Open',
+                'size': '18',
+                'weight': 'bold'
+              }
+            }
+          }
+        }
+      },
+      sections = [],
+      sectionItem = {
+        'type': 'header',
+        'block': 'switcher',
+        'data': {
+          'id': '23443',
+          'tag': 'div'
+        }
+      };
+
+  for (var i = 0; i < 10000; i++) {
+    cards.push(cardItem);
+    sections.push(sectionItem);
+  }
+
   let Grid = `
     ${Sidebar({
       'id': '34113434',
       'theme': 'primary',
       'position': 'left',
       'tag': 'aside',
-      'sections': [
-        {
-          'type': 'header',
-          'block': 'switcher',
-          'data': {
-            'id': '23443',
-            'tag': 'div'
-          }
-        },
-        {
-          'type': 'list',
-          'block': 'list',
-          'data': {
-            'id': '23443dd',
-            'tag': 'ul'
-          }
-        }
-      ]
+      'sections': sections
     })}
     <content class="grid__content">
       ${UserButton({
@@ -53,41 +76,7 @@ const OneItemPage = () => {
         'id': 'md-cards',
         'tag': 'div',
         'mods': 'p3',
-        'items': [
-          {
-            'type': 'card',
-            'block': 'card',
-            'mods': 'p2',
-            'data': {
-              'id': '23443',
-              'tag': 'div',
-              'externalLink': {
-                'block': 'control',
-                'data': {
-                  'id': '34113434',
-                  'tag': 'button',
-                  'mods': 'p4 h8 br8',
-                  'size': 'parent-width',
-                  'theme': 'transparent-white',
-                  'text': {
-                    'value': 'Open',
-                    'size': '18',
-                    'weight': 'bold'
-                  }
-                }
-              }
-            }
-          },
-          {
-            'type': 'card',
-            'block': 'card',
-            'mods': 'p2',
-            'data': {
-              'id': '23443',
-              'tag': 'div'
-            }
-          }
-        ]
+        'items': cards
       })}
       
     </content>

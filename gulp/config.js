@@ -18,6 +18,7 @@ module.exports = {
   styles: {
     src: src + "/assets/scss",
     files_src: src + "/assets/scss/**/*.scss",
+    blocks_src: src + "/blocks/",
     dist: assets_dist,
   },
 
