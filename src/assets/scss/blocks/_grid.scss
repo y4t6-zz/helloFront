@@ -1,0 +1,15 @@
+.grid {
+
+  &--state {
+
+    &--is-active-sidebar {
+      padding-left: 300px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+  }
+}
