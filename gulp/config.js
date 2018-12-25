@@ -18,6 +18,7 @@ module.exports = {
   styles: {
     src: src + "/assets/scss",
     files_src: src + "/assets/scss/**/*.scss",
+    blocks_src: src + "/blocks/",
     dist: assets_dist,
   },
 
@@ -29,11 +30,11 @@ module.exports = {
   },
 
   templates: {
-    src: src + "/template",
-    files_src: [src + "/template/**/*.pug", src + "/template/**/*.md"],
-    page_src: src + "/template/pages/**/*.pug",
-    dist: dist,
-    files_dist: dist + "/**/*.html",
+    src: src + "/pages",
+    files_src: [src + "/pages/**/*.pug", src + "/pages/**/*.md"],
+    page_src: src + "/pages/**/*.pug",
+    dist: dist + "/pages/",
+    files_dist: dist + "/pages/*.html",
   },
 
   icons: {

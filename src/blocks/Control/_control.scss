@@ -1,0 +1,20 @@
+.control {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &--size {
+
+    &--parent-width {
+      width: 100%;
+    }
+  }
+
+  &--theme {
+
+    &--transparent-white {
+      background-color: rgba(256, 256, 256, 0.3);
+      color: white;
+    }
+  }
+}

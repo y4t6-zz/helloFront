@@ -1,0 +1,14 @@
+.user-button {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  cursor: pointer;
+
+  &--theme {
+
+    &--primary {
+      background-color: $clr-primary;
+    }
+  }
+}

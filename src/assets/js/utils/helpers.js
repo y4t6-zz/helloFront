@@ -9,6 +9,22 @@ const getMods = (className, props) => {
     mods.push(className + '--size--' + props.size);
   }
 
+  if (props.position) {
+    mods.push(className + '--position--' + props.position);
+  }
+
+  if (props['offset-horizontal']) {
+    mods.push(className + '--offset-horizontal--' + props['offset-horizontal']);
+  }
+
+  if (props.weight) {
+    mods.push(className + '--weight--' + props.weight);
+  }
+
+  if (props.mods) {
+    mods.push(props.mods);
+  }
+
   return mods.join(' ');
 }
 

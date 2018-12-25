@@ -1,0 +1,20 @@
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  overflow-y: auto;
+
+  &--position {
+
+    &--left {
+      left: 0;
+    }
+  }
+
+  &--theme {
+
+    &--primary {
+      background-color: $clr-primary;
+    }
+  }
+}

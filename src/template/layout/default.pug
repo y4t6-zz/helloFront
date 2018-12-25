@@ -1,0 +1,12 @@
+include ../config
+block config
+
+doctype
+html(lang= lang)
+  head
+    include ../partials/head
+  body(class= template)
+    block content
+
+    script(src= path + "assets/app.js", async)
+
