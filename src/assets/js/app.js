@@ -1,6 +1,7 @@
-import IndexPage from '../../pages/Index/indexPage';
-import OneItemPage from "../../pages/OneItem/oneItemPage";
+import IndexPage   from '../../pages/Index/content';
+import OneItemPage from "../../pages/OneItem/content";
 
 IndexPage();
 OneItemPage();
+
 

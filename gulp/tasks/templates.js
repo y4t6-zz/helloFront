@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const config = require("../config").templates;
+const camelCaseToDash = require("../utils").camelCaseToDash;
 const pug = require("gulp-pug");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
@@ -38,8 +39,9 @@ gulp.task("templates", () => {
     )
     .pipe(size({ title: "template" }))
     .pipe(rename(function (path) {
+      let fileName = camelCaseToDash( path.dirname );
       path.dirname = "../";
-      path.basename += "";
+      path.basename = fileName;
       path.extname = ".html";
     }))
     .pipe(gulp.dest(config.dist));
