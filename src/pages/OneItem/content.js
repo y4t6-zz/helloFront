@@ -47,12 +47,73 @@ const OneItemPage = () => {
 
   let Grid = `
     ${Sidebar({
-      'id': '34113434',
-      'theme': 'primary',
-      'position': 'left',
-      'tag': 'aside',
-      'sections': sections
-    })}
+    'id': '34113434',
+    'theme': 'primary',
+    'position': 'left',
+    'tag': 'aside',
+    'sections': [
+      {
+        'type': 'header',
+        'block': 'switcher',
+        'data': {
+          'id': '23443',
+          'tag': 'div',
+          'mods': 'h68px',
+          'items': [
+            {
+              'type': 'control',
+              'block': 'control',
+              'data': {
+                'id': '34113434',
+                'tag': 'a',
+                'href': '/index.html',
+                'mods': 'p4 h32px w64px br16px',
+                'theme': 'primary-switcher',
+                'active': true,
+                'text': {
+                  'value': 'MD',
+                  'size': '18',
+                  'weight': 'bold'
+                }
+              }
+            },
+            {
+              'type': 'control',
+              'block': 'control',
+              'data': {
+                'id': '34113434',
+                'tag': 'a',
+                'href': '/my-friends-desks.html',
+                'mods': 'p4 h32px w64px br16px',
+                'theme': 'primary-switcher',
+                'text': {
+                  'value': 'MFD',
+                  'size': '18',
+                  'weight': 'bold'
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        'type': 'search',
+        'block': 'formItem',
+        'data': {
+          'id': '23443dd',
+          'tag': 'div'
+        }
+      },
+      {
+        'type': 'list',
+        'block': 'list',
+        'data': {
+          'id': '23443dd',
+          'tag': 'ul'
+        }
+      }
+    ]
+  })}
     <content class="grid__content">
       ${UserButton({
         'id': '3411ds4',

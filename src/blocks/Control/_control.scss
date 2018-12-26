@@ -2,6 +2,11 @@
   border: none;
   background: none;
   cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &--size {
 
@@ -17,4 +22,21 @@
       color: white;
     }
   }
+  &--theme {
+
+    &--primary-switcher {
+      color: #916c31;
+
+      &.is-active {
+        background-color: white;
+        color: black;
+      }
+
+      &:not(.is-active):hover {
+        background-color: #e89b01;
+        color: #7b5600;
+      }
+    }
+  }
+
 }

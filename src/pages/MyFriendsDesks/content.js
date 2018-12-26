@@ -29,7 +29,6 @@ const IndexPage = () => {
                   'href': '/index.html',
                   'mods': 'p4 h32px w64px br16px',
                   'theme': 'primary-switcher',
-                  'active': true,
                   'text': {
                     'value': 'MD',
                     'size': '18',
@@ -46,6 +45,7 @@ const IndexPage = () => {
                   'href': '/my-friends-desks.html',
                   'mods': 'p4 h32px w64px br16px',
                   'theme': 'primary-switcher',
+                  'active': true,
                   'text': {
                     'value': 'MFD',
                     'size': '18',
@@ -87,71 +87,15 @@ const IndexPage = () => {
         'mods': 'pt3 pl5',
         'text': {
           'tag': 'h1',
-          'value': 'Social Networks',
+          'value': 'My Friends Desks',
           'size': '28',
           'weight': 'bold'
         }
       })}
-      ${Cards({
-        'id': 'md-cards',
-        'tag': 'div',
-        'mods': 'p3',
-        'items': [
-          {
-            'type': 'card',
-            'block': 'card',
-            'mods': 'p2',
-            'data': {
-              'id': '23443',
-              'tag': 'div',
-              'externalLink': {
-                'block': 'control',
-                'data': {
-                  'id': '34113434',
-                  'tag': 'a',
-                  'href': '/one-item.html',
-                  'mods': 'p4 h8 br8',
-                  'size': 'parent-width',
-                  'theme': 'transparent-white',
-                  'text': {
-                    'value': 'Open',
-                    'size': '18',
-                    'weight': 'bold'
-                  }
-                }
-              }
-            }
-          },
-          {
-            'type': 'card',
-            'block': 'card',
-            'mods': 'p2',
-            'data': {
-              'id': '23443',
-              'tag': 'div',
-              'externalLink': {
-                'block': 'control',
-                'data': {
-                  'id': '34113434',
-                  'tag': 'button',
-                  'mods': 'p4 h8 br8',
-                  'size': 'parent-width',
-                  'theme': 'transparent-white',
-                  'text': {
-                    'value': 'Open',
-                    'size': '18',
-                    'weight': 'bold'
-                  }
-                }
-              }
-            }
-          }
-        ]
-      })}
     </content>
   `;
 
-  document.querySelector('.index-page') ? document.querySelector('.index-page').innerHTML = Grid : '';
+  document.querySelector('.my-friends-desks') ? document.querySelector('.my-friends-desks').innerHTML = Grid : '';
 };
 
 export default IndexPage;

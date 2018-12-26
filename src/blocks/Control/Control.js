@@ -9,8 +9,12 @@ const Control = (props) => {
 
   validateProps(props, ControlPropsTypes);
 
+  const getHref = () => {
+    return props.href ? props.href : '/index.html';
+  };
+
   return (`
-    <${props.tag ? props.tag : 'button'} class="${className} ${getMods(className, props)}">
+    <${props.tag ? props.tag : 'button'} href="${getHref()}" class="${className} ${getMods(className, props)}">
         ${props.icon ?
           `<div className="${el(className, 'icon')}">
             ${Icon(props.icon)}

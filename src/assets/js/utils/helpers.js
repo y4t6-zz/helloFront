@@ -21,6 +21,10 @@ const getMods = (className, props) => {
     mods.push(className + '--weight--' + props.weight);
   }
 
+  if (props.active === true) {
+    mods.push('is-active');
+  }
+
   if (props.mods) {
     mods.push(props.mods);
   }
